@@ -6,8 +6,8 @@
 }
 
 body {
-  background: #2f3e46; /* darkest color as background */
-  color: #cad2c5; /* light text for readability */
+  background: #2f3e46;
+  color: #cad2c5;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -16,22 +16,23 @@ body {
   text-align: center;
 }
 
+/* Layout: letters on left, game on right */
 .layout {
   display: flex;
-  flex-direction: column;
   gap: 20px;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: center;
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
 }
 
+/* Letter Panel */
 .letter-panel {
-  border: 8px solid #52796f; /* medium green */
+  border: 8px solid #52796f;
   border-radius: 8px;
   padding: 15px;
-  width: 100%;
-  max-width: 400px;
-  background: #354f52; /* slightly lighter dark */
+  width: 150px;
+  background: #354f52;
 }
 
 .panel-label {
@@ -42,7 +43,7 @@ body {
 
 .letter-grid {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: 1fr;
   gap: 5px;
   justify-items: center;
 }
@@ -51,17 +52,26 @@ body {
   border: 8px solid #52796f;
   border-radius: 4px;
   padding: 10px;
-  min-width: 25px;
+  min-width: 40px;
   text-align: center;
   font-weight: bold;
   color: #cad2c5;
+  cursor: pointer;
+  user-select: none;
 }
 
-.letter-grid span.guessed {
-  background: #84a98c; /* green highlight for guessed letters */
+.letter-grid span:hover {
+  background: #84a98c;
   color: #2f3e46;
 }
 
+.letter-grid span.guessed {
+  background: #84a98c;
+  color: #2f3e46;
+  cursor: not-allowed;
+}
+
+/* Game Container */
 .game-container {
   border: 8px solid #52796f;
   border-radius: 8px;
@@ -72,7 +82,7 @@ body {
 }
 
 .header {
-  color: #84a98c; /* highlight header */
+  color: #84a98c;
   font-size: 2rem;
   margin-bottom: 5px;
 }
@@ -105,6 +115,7 @@ body {
   color: #2f3e46;
 }
 
+/* Health */
 .health-section {
   text-align: center;
   margin: 15px 0;
@@ -114,43 +125,29 @@ body {
   width: 120px;
 }
 
+/* Word Display as Boxes */
 #wordDisplay {
-  font-size: 2rem;
-  margin: 15px 0;
-  letter-spacing: 10px;
-  color: #cad2c5;
-}
-
-.guess-section {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
   margin: 15px 0;
 }
 
-#guessInput {
+.letter-box {
   width: 50px;
-  text-align: center;
-  font-size: 1.2rem;
+  height: 50px;
   border: 8px solid #52796f;
   border-radius: 4px;
-  background: #354f52;
-  color: #cad2c5;
-}
-
-#guessBtn {
-  padding: 6px 12px;
-  margin-left: 5px;
-  border: 8px solid #52796f;
-  border-radius: 4px;
-  background: #84a98c;
-  color: #2f3e46;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
   font-weight: bold;
-  cursor: pointer;
-}
-
-#guessBtn:hover {
+  color: #cad2c5;
   background: #354f52;
-  color: #84a98c;
 }
 
+/* Stats */
 .stats-row {
   display: flex;
   justify-content: center;
@@ -171,6 +168,7 @@ body {
   color: #cad2c5;
 }
 
+/* Restart Button */
 .restart-section {
   margin: 20px 0;
 }
@@ -188,4 +186,17 @@ body {
 #restartBtn:hover {
   background: #354f52;
   color: #84a98c;
+}
+
+/* Comments Section (no header) */
+.comments-section {
+  margin-top: 20px;
+  border: 8px solid #52796f;
+  border-radius: 8px;
+  padding: 15px;
+  background: #354f52;
+  color: #cad2c5;
+  text-align: left;
+  max-height: 200px;
+  overflow-y: auto;
 }

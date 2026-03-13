@@ -12,23 +12,50 @@
 
 <div class="layout">
 
-  <!-- Letter panel -->
+  <!-- Letter panel (left) -->
   <div class="letter-panel">
     <div class="panel-label">Letters</div>
-    <div class="letter-grid" id="letterGrid"></div>
+    <div class="letter-grid" id="letterGrid">
+      <span>A</span>
+      <span>B</span>
+      <span>C</span>
+      <span>D</span>
+      <span>E</span>
+      <span>F</span>
+      <span>G</span>
+      <span>H</span>
+      <span>I</span>
+      <span>J</span>
+      <span>K</span>
+      <span>L</span>
+      <span>M</span>
+      <span>N</span>
+      <span>O</span>
+      <span>P</span>
+      <span>Q</span>
+      <span>R</span>
+      <span>S</span>
+      <span>T</span>
+      <span>U</span>
+      <span>V</span>
+      <span>W</span>
+      <span>X</span>
+      <span>Y</span>
+      <span>Z</span>
+    </div>
   </div>
 
-  <!-- Game card -->
+  <!-- Game container (right) -->
   <div class="game-container">
     <h1 class="header">Word Guess Game</h1>
-    <p class="subtitle">Your prolly cheeks at this lowkirk</p>
+    <p class="subtitle">A letter at a time</p>
 
     <!-- Difficulty -->
     <h2>Select Difficulty</h2>
     <div class="difficulty-buttons">
-      <button id="easyBtn">baby</button>
-      <button id="mediumBtn">toddler</button>
-      <button id="hardBtn">Basic English</button>
+      <button id="easyBtn">Easy</button>
+      <button id="mediumBtn">Medium</button>
+      <button id="hardBtn">Hard</button>
     </div>
 
     <!-- Health -->
@@ -36,13 +63,13 @@
       <img id="healthImage" src="images/health6.png" alt="Player Health">
     </div>
 
-    <!-- Word Display -->
-    <div id="wordDisplay">_ _ _ _ _</div>
-
-    <!-- Guess -->
-    <div class="guess-section">
-      <input type="text" id="guessInput" maxlength="1" placeholder="A">
-      <button id="guessBtn">Guess</button>
+    <!-- Word Display as Boxes -->
+    <div id="wordDisplay">
+      <span class="letter-box">_</span>
+      <span class="letter-box">_</span>
+      <span class="letter-box">_</span>
+      <span class="letter-box">_</span>
+      <span class="letter-box">_</span>
     </div>
 
     <!-- Stats -->
@@ -57,12 +84,14 @@
       </div>
     </div>
 
-    <!-- Messages -->
-    <div id="gameMessage"></div>
-
     <!-- Restart -->
     <div class="restart-section">
       <button id="restartBtn">Restart Game</button>
+    </div>
+
+    <!-- Comments Section (clean, no header) -->
+    <div class="comments-section">
+      <div id="commentsLog"></div>
     </div>
 
   </div>
