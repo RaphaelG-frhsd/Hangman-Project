@@ -1,71 +1,73 @@
-<!-- This is all AI  -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Word Guess Game</title>
-
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
-
 </head>
 
 <body>
 
-<div class="game-container">
+<div class="layout">
 
-<h1>Word Guess Game</h1>
+  <!-- Letter panel -->
+  <div class="letter-panel">
+    <div class="panel-label">Letters</div>
+    <div class="letter-grid" id="letterGrid"></div>
+  </div>
 
-<div id="difficulty-section">
-<h2>Select Difficulty</h2>
+  <!-- Game card -->
+  <div class="game-container">
+    <h1 class="header">Word Guess Game</h1>
+    <p class="subtitle">Your prolly cheeks at this lowkirk</p>
 
-<button id="easyBtn">Easy</button>
-<button id="mediumBtn">Medium</button>
-<button id="hardBtn">Hard</button>
+    <!-- Difficulty -->
+    <h2>Select Difficulty</h2>
+    <div class="difficulty-buttons">
+      <button id="easyBtn">baby</button>
+      <button id="mediumBtn">toddler</button>
+      <button id="hardBtn">Basic English</button>
+    </div>
+
+    <!-- Health -->
+    <div class="health-section">
+      <img id="healthImage" src="images/health6.png" alt="Player Health">
+    </div>
+
+    <!-- Word Display -->
+    <div id="wordDisplay">_ _ _ _ _</div>
+
+    <!-- Guess -->
+    <div class="guess-section">
+      <input type="text" id="guessInput" maxlength="1" placeholder="A">
+      <button id="guessBtn">Guess</button>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-row">
+      <div class="stat-card wrong">
+        <div class="stat-label">Wrong Guesses</div>
+        <div class="stat-value"><span id="wrongCount">0</span></div>
+      </div>
+      <div class="stat-card remaining">
+        <div class="stat-label">Guesses Remaining</div>
+        <div class="stat-value"><span id="remainingGuesses">0</span></div>
+      </div>
+    </div>
+
+    <!-- Messages -->
+    <div id="gameMessage"></div>
+
+    <!-- Restart -->
+    <div class="restart-section">
+      <button id="restartBtn">Restart Game</button>
+    </div>
+
+  </div>
 </div>
 
-<div class="health-section">
-<img id="healthImage" src="images/health6.png" alt="Player Health">
-</div>
-
-<div id="wordDisplay">
-_ _ _ _ _
-</div>
-
-<div class="guess-section">
-
-<input
-type="text"
-id="guessInput"
-maxlength="1"
-placeholder="Enter letter"
-/>
-
-<button id="guessBtn">Guess</button>
-
-</div>
-
-<div id="guessInfo">
-<p>Wrong Guesses: <span id="wrongCount">0</span></p>
-<p>Guesses Remaining: <span id="remainingGuesses">0</span></p>
-</div>
-
-<div id="usedLettersSection">
-<h3>Used Letters</h3>
-
-<div id="usedLetters">
-None
-</div>
-</div>
-
-<div id="gameMessage">
-</div>
-
-<div class="restart-section">
-<button id="restartBtn">Restart Game</button>
-</div>
-
-</div>
-
+<script src="script.js"></script>
 </body>
 </html>
