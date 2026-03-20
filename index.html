@@ -12,45 +12,25 @@
 
 <div class="layout">
 
-  <!-- Letter panel (left) -->
+  <!-- Letter Panel (LEFT) -->
   <div class="letter-panel">
     <div class="panel-label">Letters</div>
-    <div class="letter-grid" id="letterGrid">
-      <span>A</span>
-      <span>B</span>
-      <span>C</span>
-      <span>D</span>
-      <span>E</span>
-      <span>F</span>
-      <span>G</span>
-      <span>H</span>
-      <span>I</span>
-      <span>J</span>
-      <span>K</span>
-      <span>L</span>
-      <span>M</span>
-      <span>N</span>
-      <span>O</span>
-      <span>P</span>
-      <span>Q</span>
-      <span>R</span>
-      <span>S</span>
-      <span>T</span>
-      <span>U</span>
-      <span>V</span>
-      <span>W</span>
-      <span>X</span>
-      <span>Y</span>
-      <span>Z</span>
+    <div class="letter-grid">
+      <span>A</span><span>B</span><span>C</span><span>D</span>
+      <span>E</span><span>F</span><span>G</span><span>H</span>
+      <span>I</span><span>J</span><span>K</span><span>L</span>
+      <span>M</span><span>N</span><span>O</span><span>P</span>
+      <span>Q</span><span>R</span><span>S</span><span>T</span>
+      <span>U</span><span>V</span><span>W</span><span>X</span>
+      <span>Y</span><span>Z</span>
     </div>
   </div>
 
-  <!-- Game container (right) -->
+  <!-- Game Container (RIGHT) -->
   <div class="game-container">
     <h1 class="header">Word Guess Game</h1>
     <p class="subtitle">A letter at a time</p>
 
-    <!-- Difficulty -->
     <h2>Select Difficulty</h2>
     <div class="difficulty-buttons">
       <button id="easyBtn">Easy</button>
@@ -58,12 +38,10 @@
       <button id="hardBtn">Hard</button>
     </div>
 
-    <!-- Health -->
     <div class="health-section">
       <img id="healthImage" src="images/health6.png" alt="Player Health">
     </div>
 
-    <!-- Word Display as Boxes -->
     <div id="wordDisplay">
       <span class="letter-box">_</span>
       <span class="letter-box">_</span>
@@ -72,29 +50,27 @@
       <span class="letter-box">_</span>
     </div>
 
-    <!-- Stats -->
     <div class="stats-row">
-      <div class="stat-card wrong">
-        <div class="stat-label">Wrong Guesses</div>
-        <div class="stat-value"><span id="wrongCount">0</span></div>
+      <div class="stat-card">
+        <div>Wrong Guesses</div>
+        <div><span id="wrongCount">0</span></div>
       </div>
-      <div class="stat-card remaining">
-        <div class="stat-label">Guesses Remaining</div>
-        <div class="stat-value"><span id="remainingGuesses">0</span></div>
+      <div class="stat-card">
+        <div>Guesses Remaining</div>
+        <div><span id="remainingGuesses">0</span></div>
       </div>
     </div>
 
-    <!-- Restart -->
     <div class="restart-section">
       <button id="restartBtn">Restart Game</button>
     </div>
 
-    <!-- Comments Section (clean, no header) -->
     <div class="comments-section">
       <div id="commentsLog"></div>
     </div>
 
   </div>
+
 </div>
 
 <script src="script.js"></script>
